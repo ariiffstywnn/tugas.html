@@ -3,37 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isi </title>
+    <title>Buat Akun Baru</title>
+    <link rel="stylesheet" href="form.css">
 </head>
-
-    <h1>Buat Account Baru</h1>
-    <h2>Sign Up Form</h2>
-    <h3>First name :</h3>
-    <input type="text">
-    <h3>Last name :</h3>
-    <input type="text">
-    <h3>Gender</h3>
-    <input type="radio" name="gender" value="male">Male<br>
-    <input type="radio" name="gender" value="female">female<br>
-
-    <h3>Nationality</h3>
-
-    <select name="Nationality">
-      <option value="indonesia">Indonesia</option>
-      <option value="malaysia">Malaysia</option>
-      <option value="singapore">Singapore</option>
-      <option value="Other">Other</option>
-    </select>
-    <h3>Languange Spoken</h3>
-    <input type="checkbox" value="indonesia">indonesia<br>
-    <input type="checkbox" value="enggres">english<br>
-
-    <h3>BIO</h3>
-    <textarea name="bio" cols="18" rows="10"></textarea><br>
-
-    <a href="welcome.html"><input type="button" name="Sign Up" value="Sign Up"></a>
-      
-
+<body>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
     
+    .container {
+        width: 100%;
+        max-width: 400px;
+        margin: 50px auto;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #d562e4;
+        margin-bottom: 10px;
+    }
+    
+    h3 {
+        text-align: center;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="radio"],
+    input[type="checkbox"],
+    select,
+    textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #cb4de4;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+        margin: 0 10px 0 0;
+    }
+    
+    input[type="submit"] {
+        background-color: #e05ff1;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #aa00ff;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    @media (max-width: 500px) {
+        .container {
+            padding: 15px;
+        }
+    
+        input[type="text"],
+        select,
+        textarea {
+            font-size: 12px;
+        }
+    
+        input[type="submit"] {
+            font-size: 14px;
+        }
+    }
+    </style>
+   
+
+    <div class="container">
+        <form action="welcome.html" method="GET">
+            <h1>Buat Akun Baru</h1>
+            <h3>Sign Up Form</h3>
+
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" required>
+
+            <p>Gender:</p>
+            <input type="radio" id="Laki-Laki" name="gender" value="Laki-Laki" required>
+            <label for="Laki-Laki">Laki-Laki</label><br>
+            <input type="radio" id="Perempuan" name="gender" value="Perempuan">
+            <label for="Perempuan">Perempuan</label>
+
+            <label for="nationality">Nationality:</label>
+            <select name="nationality" id="nationality" required>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Inggris">Inggris</option>
+            </select>
+
+            <p>Pilih Bahasa:</p>
+            <input type="checkbox" id="bahasa-indonesia" name="bahasa">
+            <label for="bahasa-indonesia">Bahasa Indonesia</label><br>
+            <input type="checkbox" id="english" name="bahasa">
+            <label for="english">English</label><br>
+            <input type="checkbox" id="other" name="bahasa">
+            <label for="other">Other</label>
+
+            <label for="bio">Bio:</label>
+            <textarea name="bio" id="bio" rows="5" required></textarea><br>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
 </body>
 </html>
